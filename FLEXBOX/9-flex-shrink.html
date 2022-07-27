@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            background-color: red;
+        }
+
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <p>flex-shrink: 0 / basis: 100px</p>
+    <div class="flex-container">
+        <dix class="item s-0 fg-1">teste</dix>
+        <dix class="item s-0 fg-1">teste</dix>
+        <dix class="item s-0 fg-1">teste</dix>
+        <dix class="item s-0 fg-1">test</dix>
+        <dix class="item s-0 fg-1">test</dix>
+    </div>
+
+    <p>flex-shrink: 1</p>
+    <div class="flex-container">
+        <dix class="item s-1 fg-1">teste</dix>
+        <dix class="item s-1 fg-1">teste</dix>
+        <dix class="item s-1 fg-1">teste</dix>
+        <dix class="item s-1 fg-1">test</dix>
+        <dix class="item s-1 fg-1">test</dix>
+    </div>
+
+    <div class="flex-container">
+        <dix class="item s-1 fg-1">teste</dix>
+        <dix class="item s-1 fg-1">the generated</dix>
+        <dix class="item s-1 fg-1">teste</dix>
+        <dix class="item s-1 fg-1">test</dix>
+        <dix class="item s-1 fg-1">test</dix>
+    </div>
+</body>
+</html>
